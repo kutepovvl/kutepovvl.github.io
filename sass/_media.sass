@@ -1,4 +1,3 @@
-@import "bourbon"
 @import "vars"
 
 /*==========  Desktop First  ==========*/
@@ -15,43 +14,30 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	.navbar 
-        background-color: #fff
-        &-menu 
-            display: none
-            width: 100%
-            padding-top: 20px
-            padding-bottom: 20px
-            height: 100%
-            ul 
-                width: 100%
-                display: block
-                li 
-                    &:last-child 
-                        border-bottom: 1px solid $main-color
-                    text-align: center
-                    display: block
-                    float: left 
-                    width: 100%
-                    margin-left: 0
-                    &.active, &:hover 
-                        a::after 
-                            display: none
-                    a 
-                        border-top: 1px solid $main-color
-                        padding: 8px 0
-                        
-                    
-        &-logo 
-            width: 100%
-        .toggle-menu 
-            display: block
-
+    .block-container
+        flex-direction: column
+        .block 
+            height: 50vh    
+            .menu-item
+                span 
+                    display: none
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
-
+	.about  
+        &-me    
+            .name 
+                font-size: 50px   
+        
+@media only screen and (max-width : 481px)        
+    .main-foot
+        .name
+            &::after 
+                display: none
+    .portfolio
+        &-item 
+            img 
+                width: 310px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
@@ -73,11 +59,6 @@
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
 	/**/
-
-@media only screen and (min-width : 769px)
-    .navbar 
-        &-menu 
-            display: block !important
 
 
 /* Medium Devices, Desktops */
